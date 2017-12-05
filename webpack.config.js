@@ -23,12 +23,14 @@ module.exports ={
 				loaders: {
 					less: ExtractTextPlugin.extract({
 						use:['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
-						fallback: 'vue-style-loader'
+						fallback: 'vue-style-loader',
+						publicPath: ''
 					}),
 
 					css: ExtractTextPlugin.extract({
 						use:['css-loader', 'autoprefixer-loader'],
-						fallback: 'vue-style-loader'
+						fallback: 'vue-style-loader',
+						publicPath: ''
 					})
 				}
 			}
