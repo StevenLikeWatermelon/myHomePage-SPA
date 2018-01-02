@@ -18,6 +18,12 @@
 	    padding: 0px 15px 5px 15px;
 	    background: #ffffff;
 	}
+	.el-menu-demo a{
+		text-decoration: none;
+		display: block;
+		width: 100%;
+		height: 100%
+	}
 </style>
 
 <template>
@@ -31,9 +37,9 @@
 				</el-col>
 				<el-col :xs="0" :md="16" :sm="16">
 					<div>
-						<el-menu :default-active="activeIndex" mode="horizontal">
-							<el-menu-item index="1"><router-link to="/">我的首页</router-link></el-menu-item>
-							<el-menu-item index="2"><router-link to="/work-experience">工作经历</router-link></el-menu-item>
+						<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+						  <el-menu-item index="1"><router-link to="/">我的首页</router-link></el-menu-item>
+						  <el-menu-item index="2"><router-link to="/work-experience">IT分享</router-link></el-menu-item>
 						</el-menu>
 					</div>
 				</el-col>

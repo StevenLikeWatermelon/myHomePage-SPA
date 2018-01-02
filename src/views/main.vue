@@ -6,6 +6,7 @@
 	.content {
 		width: 100%;
 		height: 100%;
+		margin-top: 50px;
 		position: absolute;
 	}
 

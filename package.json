@@ -4,8 +4,8 @@
   "description": "this is my homePage",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base ./ --inline  --hot --colors --compress --history-api-fallback --open --config webpack.config.js",
-    "test": "webpack --progress --watch -p -d --config webpack.config.js"
+    "dev": "webpack-dev-server --inline --hot --compress --history-api-fallback --config webpack.config.js",
+    "init": "webpack --progress --watch -p -d  --config webpack.config.js"
   },
   "repository": {
     "type": "git",

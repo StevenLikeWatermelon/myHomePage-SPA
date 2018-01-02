@@ -12,7 +12,15 @@
 
 <style>
 	.main-class {
-		width: 100%;
-		height: 100%
+    	background: url(./img/hero1.jpg);
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	    min-width: 100%;
+	    min-height: 1000px;
+	    height: 1000px;
+	    width: 100%;
+	    display: block;
 	}
 </style>

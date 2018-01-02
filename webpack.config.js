@@ -42,7 +42,8 @@ module.exports ={
 			test: /\.css$/,
 			use: ExtractTextPlugin.extract({
 				use: ['css-loader', 'autoprefixer-loader'],
-				fallback: 'vue-style-loader'	
+				fallback: 'vue-style-loader',
+				publicPath: ''	
 			})
 		}, {
 			test: /\.less$/,
