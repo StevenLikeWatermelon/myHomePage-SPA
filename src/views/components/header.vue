@@ -38,8 +38,9 @@
 				<el-col :xs="0" :md="16" :sm="16">
 					<div>
 						<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-						  <el-menu-item index="1"><router-link to="/">我的首页</router-link></el-menu-item>
-						  <el-menu-item index="2"><router-link to="/work-experience">IT分享</router-link></el-menu-item>
+							<el-menu-item v-for="item in menuList" :index="item.index" :key="item.index">
+								<a @click="goRouter(item.path, item.index)">{{item.name}}</a>
+							</el-menu-item>
 						</el-menu>
 					</div>
 				</el-col>
@@ -54,7 +55,27 @@
 		data () {
 			return {
 				imgUrl: require('../../img/steven.png'),
-				activeIndex:'1'
+				menuList: [{
+					index: '1',
+					path: '/',
+					name: '我的首页'
+				}, {
+					index: '2',
+					path: '/work-experience',
+					name: 'IT日记'
+				}]
+			}
+		},
+		methods: {
+			goRouter (path, index) {
+				this.$router.push(path);
+				localStorage.setItem('currentRouteIndex', index.toString());
+				this.$store.commit('getCurrentPathIndex', index);
+			}
+		},
+		computed: {
+			activeIndex () {
+				return this.$store.state.currentRouteIndex;
 			}
 		}
 	};
