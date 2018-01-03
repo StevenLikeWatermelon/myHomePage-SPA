@@ -34,7 +34,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "babel-runtime": "^6.11.6",
     "css-loader": "^0.23.1",
-    "element-ui": "^2.0.7",
+    "element-ui": "^2.0.10",
     "eslint": "^3.19.0",
     "eslint-config-google": "^0.9.1",
     "eslint-config-standard": "^10.2.1",

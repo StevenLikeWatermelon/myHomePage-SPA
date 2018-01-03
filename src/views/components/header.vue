@@ -9,7 +9,7 @@
 		bottom: 0;
 	    width: 100%;
 	    height: 50px;
-	    opacity: 0.5;
+	    opacity: 0.3;
 	    z-index: 1;
 	    top: 0;
 	    left: 0;
@@ -23,6 +23,15 @@
 		display: block;
 		width: 100%;
 		height: 100%
+	}
+	.header .el-menu--horizontal>.el-menu-item.is-active {
+		color: #000;
+		font-weight: 700;
+	}
+	.header .el-menu--horizontal .el-menu-item {
+		height: 55px;
+		line-height: 55px;
+		color: #000;
 	}
 </style>
 

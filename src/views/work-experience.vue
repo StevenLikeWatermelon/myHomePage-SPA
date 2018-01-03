@@ -1,15 +1,86 @@
 <style>
-    #home {
-
+    article {
+    	display: block;
+		background: url('../img/articlebg.png') repeat;
+	    width: 1000px;
+	    margin: 50px auto;
+	    overflow: hidden;
     }
+    .container {
+    	background: url('../img/articlebg.png') repeat;
+	    overflow: hidden;
+	    margin: 20px;
+	    box-shadow: #075498 0px 1px 10px;
+    }
+    .blog {
+    	margin: 30px 20px;
+    	overflow: hidden;
+    }
+    .blog figure {
+	    background: #ececec;
+	    border: #FFF 10px solid;
+	    width: 270px;
+	    height: 430px;
+	    float: left;
+	    margin: 0 8px 0;
+	    overflow: hidden;
+    }
+    .blog figure p {
+	    font-size: 14px;
+	    text-shadow: #fff 1px 1px 0px;
+	    line-height: 26px;
+	    text-align: center;
+	    font-weight: bold;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    margin-top: 10px;
+    }
+	.blog figure figcaption {
+	    padding: 10px;
+	    line-height: 22px;
+	    color: #666;
+	    overflow: hidden;
+	    margin-top: -13px;
+	    text-overflow: ellipsis;
+	}
 </style>
 
 <template>
-	<section id="home">
-		<div>
-			<p>发下一个很不错的方法，可以控制在数组求和的百分比的精度，且保证百分比总和相加为100%,以下是计算后的百分比数组</p>
-			<p> {{displayArr}}</p>
-		</div>
+	<section>
+		<article>
+			<div class="container">
+				<div class="blog">
+					<figure @click="go()">
+						<img src="../img/js.png">
+						<p>JS精确控制四舍五入百分比，总和100%</p>
+						<figcaption>
+							平时在计算表格列表中遇到的数值/总和得出百分比时,一般通过四舍五入得出百分比的值，但是这样会舍掉值可能会导致总和加起来不等于100%的情况，先介绍一种更好地四舍五入方法，将百分比更准确，也更精确的控制
+						</figcaption>
+					</figure>
+					<figure @click="go()">
+						<img src="../img/js.png">
+						<p>JS精确控制四舍五入百分比，总和100%</p>
+						<figcaption>
+							平时在计算表格列表中遇到的数值/总和得出百分比时,一般通过四舍五入得出百分比的值，但是这样会舍掉值可能会导致总和加起来不等于100%的情况，先介绍一种更好地四舍五入方法，将百分比更准确，也更精确的控制
+						</figcaption>
+					</figure>
+					<figure @click="go()">
+						<img src="../img/js.png">
+						<p>JS精确控制四舍五入百分比，总和100%</p>
+						<figcaption>
+							平时在计算表格列表中遇到的数值/总和得出百分比时,一般通过四舍五入得出百分比的值，但是这样会舍掉值可能会导致总和加起来不等于100%的情况，先介绍一种更好地四舍五入方法，将百分比更准确，也更精确的控制
+						</figcaption>
+					</figure>
+					<figure @click="go()">
+						<img src="../img/js.png">
+						<p>JS精确控制四舍五入百分比，总和100%</p>
+						<figcaption>
+							平时在计算表格列表中遇到的数值/总和得出百分比时,一般通过四舍五入得出百分比的值，但是这样会舍掉值可能会导致总和加起来不等于100%的情况，先介绍一种更好地四舍五入方法，将百分比更准确，也更精确的控制
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</article>>
 	</section>
 </template>
 
@@ -72,6 +143,9 @@
 			    }
 
 			    return seats[idx] / digits;
+			},
+			go() {
+				console.log('1111')
 			}
     	},
     	created () {
