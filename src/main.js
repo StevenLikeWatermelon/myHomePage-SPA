@@ -1,12 +1,15 @@
 import Vue from 'vue';
+import {Row, Col, Menu, MenuItem} from 'element-ui'
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
-import ElementUI from 'element-ui';
 import {routersArr} from './router';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './app.vue';
 
-Vue.use(ElementUI);
+Vue.use(Row)
+Vue.use(Col)
+Vue.use(Menu)
+Vue.use(MenuItem)
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
