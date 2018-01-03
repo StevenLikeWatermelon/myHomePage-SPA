@@ -32,14 +32,14 @@
 			<el-row>
 				<el-col :xs="18" :md="8" :sm="8">
 					<div style="padding-top: 6px;">
-						<router-link to="/"><img :src="imgUrl"></router-link>
+						<router-link to="/index"><img :src="imgUrl"></router-link>
 					</div>
 				</el-col>
 				<el-col :xs="0" :md="16" :sm="16">
 					<div>
 						<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
 							<el-menu-item v-for="item in menuList" :index="item.index" :key="item.index">
-								<a @click="goRouter(item.path, item.index)">{{item.name}}</a>
+								<a @click="goRouter(item.name)">{{item.title}}</a>
 							</el-menu-item>
 						</el-menu>
 					</div>
@@ -54,28 +54,28 @@
 	export default {
 		data () {
 			return {
-				imgUrl: require('../../img/steven.png'),
-				menuList: [{
-					index: '1',
-					path: '/',
-					name: '我的首页'
-				}, {
-					index: '2',
-					path: '/work-experience',
-					name: 'IT日记'
-				}]
+				imgUrl: require('../../img/steven.png')
 			}
 		},
 		methods: {
-			goRouter (path, index) {
-				this.$router.push(path);
-				localStorage.setItem('currentRouteIndex', index.toString());
-				this.$store.commit('getCurrentPathIndex', index);
+			goRouter (path) {
+				this.$router.push({name: path});
 			}
 		},
 		computed: {
 			activeIndex () {
 				return this.$store.state.currentRouteIndex;
+			},
+			menuList () {
+				return this.$store.state.menuList;
+			}
+		},
+		created () {
+			this.$store.commit('getCurrentMenuList', this.$route.name);
+		},
+		watch: {
+			'$route' (to) {
+				this.$store.commit('getCurrentMenuList', to.name);
 			}
 		}
 	};

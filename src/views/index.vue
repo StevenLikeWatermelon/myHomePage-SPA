@@ -5,12 +5,11 @@
 	  width: 275px;
 	  height: 124px;
 	  left: 50%;
-	  top: 35%;
+	  top: 25%;
 	  padding: 65px;
 	  background: rgba(255, 255, 255, 0.8);
 	  outline: 4px double #FFFFFF;
 	  outline-offset: 8px;
-	  -webkit-transform: translateY(-35%);
 	  -webkit-animation: bounceInRight 1s ease 1 forwards;
     }
 

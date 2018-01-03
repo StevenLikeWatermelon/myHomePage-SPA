@@ -14,15 +14,50 @@ const routerConfig = {
 	routes: routersArr
 }
 const router = new VueRouter(routerConfig);
+router.beforeEach((to, from, next) => {
+	let notFound = true;
+	routersArr.forEach(item => {
+		let routerInfo = item.children;
+		routerInfo.forEach(item => {
+			if (to.name == item.name) {
+				notFound = false;
+			}
+		});
+	});
+	if (notFound) {
+		next({
+            name: 'home_index'
+        });
+	} else {
+		next();
+	}
+});
 
 const store = new Vuex.Store({
 	state: {
-		currentRouteIndex: localStorage.getItem('currentRouteIndex') || '1' //默认首页
+		currentRouteIndex: 0, //默认首页
+		menuList: []
+
 	},
 	mutations: {
-		getCurrentPathIndex (state, index) {
-			state.currentRouteIndex = index;
-		}
+		getCurrentMenuList (state, name) {
+			state.menuList = [];
+			routersArr.forEach(item => {
+				let routerInfo = item.children;
+				let currentRoute;
+				routerInfo.forEach((item, index) => {
+					currentRoute = {
+						index: index,
+						name: item.name,
+						title: item.title
+					};
+					state.menuList.push(currentRoute);
+					if (item.name == name) {
+						state.currentRouteIndex = index;
+					}
+				});
+			});
+		},
 	}
 });
 
