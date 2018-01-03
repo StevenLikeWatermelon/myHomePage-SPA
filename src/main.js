@@ -10,6 +10,7 @@ Vue.use(ElementUI);
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
+// router
 const routerConfig = {
 	routes: routersArr
 }
@@ -33,6 +34,7 @@ router.beforeEach((to, from, next) => {
 	}
 });
 
+//vuex
 const store = new Vuex.Store({
 	state: {
 		currentRouteIndex: 0, //默认首页
