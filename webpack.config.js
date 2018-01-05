@@ -12,8 +12,8 @@ module.exports ={
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		publicPath: './dist/',
-		filename: '[name].[hash].bundle.js',
-		chunkFilename: '[name].[hash].chunk.js'
+		filename: '[name].bundle.js',
+		chunkFilename: '[name].chunk.js'
 	},
 	module: {
 		rules: [{
@@ -68,7 +68,7 @@ module.exports ={
 	devtool: '#source-map',
 	plugins: [
 		new ExtractTextPlugin({
-			filename: '[name].[hash].css',
+			filename: '[name].css',
 			allChunks: true
 		}),
 		new webpack.optimize.CommonsChunkPlugin({
