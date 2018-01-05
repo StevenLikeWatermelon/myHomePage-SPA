@@ -13,17 +13,22 @@
 	    box-shadow: #075498 0px 1px 10px;
     }
     .blog {
-    	margin: 30px 20px;
+    	margin: 25px 20px;
     	overflow: hidden;
     }
     .blog figure {
 	    background: #ececec;
 	    border: #FFF 10px solid;
 	    width: 270px;
-	    height: 430px;
+	    height: 320px;
 	    float: left;
 	    margin: 0 8px 0;
 	    overflow: hidden;
+	    margin-bottom: 15px;
+    }
+    .blog figure img {
+    	width: 270px;
+    	height: 165px;
     }
     .blog figure p {
 	    font-size: 14px;
@@ -41,7 +46,8 @@
 	    color: #666;
 	    overflow: hidden;
 	    margin-top: -13px;
-	    text-overflow: ellipsis;
+	    height: 80px;
+	    overflow: hidden;
 	}
 </style>
 

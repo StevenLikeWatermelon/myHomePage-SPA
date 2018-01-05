@@ -9,7 +9,7 @@
 		bottom: 0;
 	    width: 100%;
 	    height: 50px;
-	    opacity: 0.3;
+	    opacity: 0.5;
 	    z-index: 1;
 	    top: 0;
 	    left: 0;
@@ -40,7 +40,7 @@
 		<div class="fix-header">
 			<el-row>
 				<el-col :xs="18" :md="8" :sm="8">
-					<div style="padding-top: 6px;">
+					<div style="padding-top: 10px;">
 						<router-link to="/index"><img :src="imgUrl"></router-link>
 					</div>
 				</el-col>
