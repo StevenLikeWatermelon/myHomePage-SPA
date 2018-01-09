@@ -12,7 +12,7 @@
 
 <style>
 	html {
-    	background: url(./img/hero1.jpg) repeat;
+    	background: url(./img/hero1.jpg) no-repeat top center #075498;;
 	    -webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;

@@ -14,7 +14,6 @@
     }
     .blog {
     	margin: 25px 20px;
-    	background: url('../../../img/articlebg.png') repeat;
     	overflow: hidden;
     }
     .blog figure {

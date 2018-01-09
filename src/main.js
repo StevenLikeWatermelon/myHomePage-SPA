@@ -18,7 +18,6 @@ Vue.use(Vuex);
 //添加一个请求拦截器
 axios.interceptors.request.use(function(config){
   //在请求发出之前进行一些操作
-  console.log(config);
   return config;
 },function(err){
   //Do something with request error
