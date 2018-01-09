@@ -1,19 +1,20 @@
 <style>
     article {
     	display: block;
-		background: url('../img/articlebg.png') repeat;
+		background: url('../../../img/articlebg.png') repeat;
 	    width: 1000px;
 	    margin: 50px auto;
 	    overflow: hidden;
     }
     .container {
-    	background: url('../img/articlebg.png') repeat;
+    	background: url('../../../img/articlebg.png') repeat;
 	    overflow: hidden;
 	    margin: 20px;
 	    box-shadow: #075498 0px 1px 10px;
     }
     .blog {
     	margin: 25px 20px;
+    	background: url('../../../img/articlebg.png') repeat;
     	overflow: hidden;
     }
     .blog figure {
@@ -57,28 +58,28 @@
 			<div class="container">
 				<div class="blog">
 					<figure @click="go()">
-						<img src="../img/js.png">
+						<img src="../../../img/js.png">
 						<p>JS精确控制四舍五入百分比，总和100%</p>
 						<figcaption>
 							平时在计算表格列表中遇到的数值/总和得出百分比时,一般通过四舍五入得出百分比的值，但是这样会舍掉值可能会导致总和加起来不等于100%的情况，先介绍一种更好地四舍五入方法，将百分比更准确，也更精确的控制
 						</figcaption>
 					</figure>
 					<figure @click="go()">
-						<img src="../img/js.png">
+						<img src="../../../img/js.png">
 						<p>JS精确控制四舍五入百分比，总和100%</p>
 						<figcaption>
 							平时在计算表格列表中遇到的数值/总和得出百分比时,一般通过四舍五入得出百分比的值，但是这样会舍掉值可能会导致总和加起来不等于100%的情况，先介绍一种更好地四舍五入方法，将百分比更准确，也更精确的控制
 						</figcaption>
 					</figure>
 					<figure @click="go()">
-						<img src="../img/js.png">
+						<img src="../../../img/js.png">
 						<p>JS精确控制四舍五入百分比，总和100%</p>
 						<figcaption>
 							平时在计算表格列表中遇到的数值/总和得出百分比时,一般通过四舍五入得出百分比的值，但是这样会舍掉值可能会导致总和加起来不等于100%的情况，先介绍一种更好地四舍五入方法，将百分比更准确，也更精确的控制
 						</figcaption>
 					</figure>
 					<figure @click="go()">
-						<img src="../img/js.png">
+						<img src="../../../img/js.png">
 						<p>JS精确控制四舍五入百分比，总和100%</p>
 						<figcaption>
 							平时在计算表格列表中遇到的数值/总和得出百分比时,一般通过四舍五入得出百分比的值，但是这样会舍掉值可能会导致总和加起来不等于100%的情况，先介绍一种更好地四舍五入方法，将百分比更准确，也更精确的控制

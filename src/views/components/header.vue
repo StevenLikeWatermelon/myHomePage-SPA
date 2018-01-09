@@ -47,8 +47,8 @@
 				<el-col :xs="0" :md="16" :sm="16">
 					<div>
 						<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-							<el-menu-item v-for="item in menuList" :index="item.index" :key="item.index">
-								<a @click="goRouter(item.name)">{{item.title}}</a>
+							<el-menu-item v-for="item in menuList" :index="item.index" :key="item.index" @click="goRouter(item.name)">
+								<a>{{item.title}}</a>
 							</el-menu-item>
 						</el-menu>
 					</div>

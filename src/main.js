@@ -56,7 +56,9 @@ const store = new Vuex.Store({
 						name: item.name,
 						title: item.title
 					};
-					state.menuList.push(currentRoute);
+					if (item.display) {
+						state.menuList.push(currentRoute);
+					}
 					if (item.name == name) {
 						state.currentRouteIndex = index;
 					}
