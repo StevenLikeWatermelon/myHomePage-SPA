@@ -23,6 +23,7 @@
   "homepage": "https://github.com/StevenLikeWatermelon/ImSteven#readme",
   "dependencies": {
     "autoprefixer-loader": "^2.0.0",
+    "axios": "^0.17.1",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-eslint": "^8.0.1",
