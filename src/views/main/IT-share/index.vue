@@ -20,7 +20,7 @@
 	    background: #ececec;
 	    border: #FFF 10px solid;
 	    width: 270px;
-	    height: 337px;
+	    height: 320px;
 	    float: left;
 	    margin: 0 8px 0;
 	    overflow: hidden;
@@ -62,7 +62,7 @@
 						<p class="title">{{item.title}}</p>
 						<figcaption>
 							<p>{{item.discription}}</p>
-							<p style="float:right;margin: -20px 10px 0 0;font-weight:700">{{item.createTime}}</p>
+							<p style="float:right;margin: -35px 10px 0 0;font-weight:700">{{item.createTime}}</p>
 						</figcaption>
 
 					</figure>
