@@ -49,6 +49,9 @@ router.beforeEach((to, from, next) => {
 	}
 });
 
+router.afterEach(() => {
+	window.scrollTo(0, 0);
+});
 //vuex
 const store = new Vuex.Store({
 	state: {
@@ -62,9 +65,9 @@ const store = new Vuex.Store({
 			routersArr.forEach(item => {
 				let routerInfo = item.children;
 				let currentRoute;
-				routerInfo.forEach((item, index) => {
+				routerInfo.forEach((item) => {
 					currentRoute = {
-						index: index,
+						index: item.index,
 						name: item.name,
 						title: item.title
 					};
@@ -72,7 +75,7 @@ const store = new Vuex.Store({
 						state.menuList.push(currentRoute);
 					}
 					if (item.name == name) {
-						state.currentRouteIndex = index;
+						state.currentRouteIndex = item.index;
 					}
 				});
 			});

@@ -7,6 +7,7 @@
 	}
 	.container h4.article {
 		font-size: 18px;
+		color: #fff;
     	margin-bottom: 30px;
      	text-align: center; 
 	}

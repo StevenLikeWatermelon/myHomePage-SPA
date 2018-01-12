@@ -11,12 +11,8 @@
 </script>
 
 <style>
-	html {
-    	background: url(./img/hero1.jpg) no-repeat top center #075498;;
-	    -webkit-background-size: cover;
-	    -moz-background-size: cover;
-	    -o-background-size: cover;
-	    background-size: cover;
+	body {
+    	background: url(./img/hero1.jpg) no-repeat top left #075498;
 	    min-width: 100%;
 	    min-height: 1000px;
 	    width: 100%;
