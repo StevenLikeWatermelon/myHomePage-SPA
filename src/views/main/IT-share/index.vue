@@ -24,6 +24,7 @@
 	    float: left;
 	    margin: 0 8px 0;
 	    overflow: hidden;
+	    cursor: pointer;
 	    margin-bottom: 15px;
     }
     .blog figure img {
@@ -46,7 +47,7 @@
 	    color: #666;
 	    overflow: hidden;
 	    margin-top: -13px;
-	    height: 80px;
+	    height: 60px;
 	    overflow: hidden;
 	    font-size: 12px;
 	}
@@ -57,14 +58,13 @@
 		<article>
 			<div class="container">
 				<div class="blog">
-					<figure @click="go()" v-for="item in articleList">
-						<img src="../../../img/js.png">
+					<figure v-for="item in articleList"  @click="go(item.id)">
+						<img :src="item.type">
 						<p class="title">{{item.title}}</p>
 						<figcaption>
 							<p>{{item.discription}}</p>
-							<p style="float:right;margin: -35px 10px 0 0;font-weight:700">{{item.createTime}}</p>
+							<p style="float:right;margin: -20px 10px 0 0;font-weight:700">{{item.createTime}}</p>
 						</figcaption>
-
 					</figure>
 				</div>
 			</div>
@@ -84,20 +84,26 @@
     		}
     	},
     	methods: {
-			go() {
-				console.log('1111')
+    		getArticleList() {
+	    		// 获取文章列表
+	    		this.$http.get('src/phpCtrl/articleList.php').then(res => {
+	    			if (res && res.data && res.data.length) {
+	    				this.articleList = res.data;
+	    			}
+	    		}).catch(err => {
+	    			this.$Message.error('获取文章列表失败!');
+	    			console.log(err)
+	    		});
+    		},
+			go(id) {
+				this.$router.push({
+					name: 'IT_share_detail',
+					query: {id: id}
+				});
 			}
     	},
     	created () {
-    		// 获取文章列表
-    		this.$http.get('src/phpCtrl/article.php').then(res => {
-    			if (res && res.data && res.data.length) {
-    				this.articleList = res.data;
-    			}
-    		}).catch(err => {
-    			this.$Message.error('获取文章列表失败!');
-    			console.log(err)
-    		})
+    		this.getArticleList();
     	}
     };
 </script>

@@ -11,11 +11,15 @@
     	margin-bottom: 30px;
      	text-align: center; 
 	}
-	.container p.article-content {
+	.container .blog-detail ul p {
 		color: #fff;
 		margin-bottom: 20px;
 		text-align: left;
 		font-size: 14px;
+	}
+	.container .blog-detail ul p img{
+		width: 100%;
+		height: auto;
 	}
 	.container .blog-detail ul {
 		padding: 0;
@@ -30,12 +34,20 @@
 				<div class="blog-detail">
 					<ul>
 						<h4 class="article">
-							<span>JS精确控制百分比四舍五入，总和100%</span>
-							<span style="float: right;font-size: 13px;">2017-09-08</span>
+							<span>{{detail.title}}</span>
+							<span style="float: right;font-size: 13px;padding-top: 4px;">{{detail.time}}</span>
 						</h4>
-						<p class="article-content">
-							平时在计算表格列表中遇到的数值/总和得出百分比时,一般通过四舍五入得出百分比的值，但是这样会舍掉值可能会导致总和加起来不等于
+						<div v-html="detail.content"></div>
+						<p>
+						    &nbsp;&nbsp;
 						</p>
+						<p>
+						    (本文由前端工程师steven沈文杰原创，转载请放原文链接，谢谢！)
+						</p>
+						<p style="text-align: center;color: #3ae810">#个人原创，难免有错误之处，欢迎各位留言批评指正! 谢谢!#</p>
+						<div style="text-align: center;">
+							<el-button type="success" @click="goBack()" round>返回</el-button>
+						</div>
 					</ul>
 				</div>
 			</div>
@@ -49,12 +61,35 @@
     export default {
     	data () {
     		return {
+    			detail: {
+    				title: '',
+    				content: '',
+    				time: ''
+    			}
     		}
     	},
     	methods: {
+    		getArticleDetail() {
+	    		// 获取文章详情
+	    		this.$http.get('src/phpCtrl/articleDetail.php', {
+	    			params: {
+	    				id: this.$route.query.id
+	    			}
+	    		}).then(res => {
+	    			this.detail.title = res.data.title;
+	    			this.detail.content = res.data.content;
+	    			this.detail.time = res.data.createTime;
+	    		}).catch(err => {
+	    			this.$Message.error('获取文章详情失败!');
+	    			console.log(err)
+	    		});
+    		},
+    		goBack () {
+    			this.$router.go(-1);
+    		}
     	},
     	created () {
-
+    		this.getArticleDetail();
     	}
     };
 </script>

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import {Row, Col, Menu, MenuItem} from 'element-ui'
+import {Row, Col, Menu, MenuItem, Button} from 'element-ui'
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import {routersArr} from './router';
@@ -7,10 +7,11 @@ import axios from 'axios';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './app.vue';
 
-Vue.use(Row)
-Vue.use(Col)
-Vue.use(Menu)
-Vue.use(MenuItem)
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Menu);
+Vue.use(Button);
+Vue.use(MenuItem);
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
