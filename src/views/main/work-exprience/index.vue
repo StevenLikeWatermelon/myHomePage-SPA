@@ -172,7 +172,7 @@
     	methods: {
     	},
     	mounted () {
-    		window.scrollReveal = new scrollReveal({reset: true});
+    		window.startScroll = new scrollReveal({reset: true});
     	}
     };
 </script>
