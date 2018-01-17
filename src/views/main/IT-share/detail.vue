@@ -29,7 +29,7 @@
 
 <template>
 	<section>
-		<article>
+		<article   v-loading="loading"  element-loading-text="拼命加载中"  element-loading-spinner="el-icon-loading" element-loading-background="rgba(180, 180, 180, 0.8)">
 			<div class="container">
 				<div class="blog-detail">
 					<ul>
@@ -62,6 +62,7 @@
     	data () {
     		return {
     			detail: {
+    				loading: false,
     				title: '',
     				content: '',
     				time: ''
@@ -71,6 +72,7 @@
     	methods: {
     		getArticleDetail() {
 	    		// 获取文章详情
+	    		this.loading = true;
 	    		this.$http.get('src/phpCtrl/articleDetail.php', {
 	    			params: {
 	    				id: this.$route.query.id
@@ -79,6 +81,7 @@
 	    			this.detail.title = res.data.title;
 	    			this.detail.content = res.data.content;
 	    			this.detail.time = res.data.createTime;
+	    			this.loading = false;
 	    		}).catch(err => {
 	    			this.$Message.error('获取文章详情失败!');
 	    			console.log(err)

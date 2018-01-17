@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import {Row, Col, Menu, MenuItem, Button} from 'element-ui'
+import {Row, Col, Menu, MenuItem, Button, Loading} from 'element-ui'
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import {routersArr} from './router';
@@ -11,6 +11,7 @@ Vue.use(Row);
 Vue.use(Col);
 Vue.use(Menu);
 Vue.use(Button);
+Vue.use(Loading);
 Vue.use(MenuItem);
 Vue.use(VueRouter);
 Vue.use(Vuex);

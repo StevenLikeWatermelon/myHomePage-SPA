@@ -55,7 +55,7 @@
 
 <template>
 	<section>
-		<article>
+		<article  v-loading="loading"  element-loading-text="拼命加载中"  element-loading-spinner="el-icon-loading" element-loading-background="rgba(180, 180, 180, 0.8)">
 			<div class="container">
 				<div class="blog">
 					<figure v-for="item in articleList"  @click="go(item.id)">
@@ -77,6 +77,7 @@
     export default {
     	data () {
     		return {
+    			loading: false,
     			articleList: [],
     			numArr: [23,44,566,7,878,989,32],
 	    		percentArr:[],
@@ -85,11 +86,15 @@
     	},
     	methods: {
     		getArticleList() {
+    			this.loading = true;
 	    		// 获取文章列表
 	    		this.$http.get('src/phpCtrl/articleList.php').then(res => {
 	    			if (res && res.data && res.data.length) {
 	    				this.articleList = res.data;
+	    			} else {
+	    				this.$Message.error('获取文章列表为空!');
 	    			}
+	    			this.loading = false;
 	    		}).catch(err => {
 	    			this.$Message.error('获取文章列表失败!');
 	    			console.log(err)
