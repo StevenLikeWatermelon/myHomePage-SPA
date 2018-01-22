@@ -1,59 +1,3 @@
-<style>
-    article {
-    	display: block;
-		background: url('../../../img/articlebg.png') repeat;
-	    width: 1000px;
-	    margin: 50px auto;
-	    overflow: hidden;
-    }
-    .container {
-    	background: url('../../../img/articlebg.png') repeat;
-	    overflow: hidden;
-	    margin: 20px;
-	    box-shadow: #075498 0px 1px 10px;
-	   	cursor: pointer;
-    }
-    .blog {
-    	margin: 25px 20px;
-    	overflow: hidden;
-    }
-    .blog figure {
-	    background: #ececec;
-	    border: #FFF 10px solid;
-	    width: 270px;
-	    height: 320px;
-	    float: left;
-	    margin: 0 8px 0;
-	    overflow: hidden;
-	    cursor: pointer;
-	    margin-bottom: 15px;
-    }
-    .blog figure img {
-    	width: 270px;
-    	height: 165px;
-    }
-    .blog figure .title {
-	    font-size: 14px;
-	    text-shadow: #fff 1px 1px 0px;
-	    line-height: 26px;
-	    text-align: center;
-	    font-weight: bold;
-	    white-space: nowrap;
-	    text-overflow: ellipsis;
-	    margin-top: 10px;
-    }
-	.blog figure figcaption p{
-	    padding: 10px;
-	    line-height: 22px;
-	    color: #666;
-	    overflow: hidden;
-	    margin-top: -13px;
-	    height: 60px;
-	    overflow: hidden;
-	    font-size: 12px;
-	}
-</style>
-
 <template>
 	<section>
 		<article  v-loading="loading"  element-loading-text="拼命加载中"  element-loading-spinner="el-icon-loading" element-loading-background="rgba(180, 180, 180, 0.8)">
@@ -89,7 +33,7 @@
     		getArticleList() {
     			this.loading = true;
 	    		// 获取文章列表
-	    		this.$http.get('src/phpCtrl/articleList.php').then(res => {
+	    		this.$http.get('src/phpCtrl/lifeArticleList.php').then(res => {
 	    			if (res && res.data && res.data.length) {
 	    				this.articleList = res.data;
 	    			} else {
@@ -103,7 +47,7 @@
     		},
 			go(id) {
 				this.$router.push({
-					name: 'IT_share_detail',
+					name: 'Life-gossip-detail',
 					query: {id: id}
 				});
 			}

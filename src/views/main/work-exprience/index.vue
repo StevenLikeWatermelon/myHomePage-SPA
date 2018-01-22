@@ -25,6 +25,8 @@
 	    padding-right: 30px;
 	    position: absolute;
 	    margin-left: 20px;
+	    background: #afdcf82b; 
+	    border-radius: 20px 0 0 20px; 
 	    -webkit-transition: all 1s;
 	    -moz-transition: all 1s;
 	    -o-transition: all 1s;
@@ -33,7 +35,7 @@
 		background: #579dc5;
 	}
 	.container .work-exprience-detail ul > li:hover .cbp_tmicon { box-shadow: 0 0 0 3px #ececec; }
-	.container .work-exprience-detail ul > li:hover .cbp_tmtime { background: #afdcf8; border-radius: 20px 0 0 20px; }
+	.container .work-exprience-detail ul > li:hover .cbp_tmtime { background: #afdcf8;}
 	.container .work-exprience-detail ul > li:hover .cbp_tmtime span { color: #fff; }
 	.container .work-exprience-detail ul > li .cbp_tmtime span {
 	    display: block;
@@ -83,6 +85,7 @@
 	    border-radius: 5px;
 	    height: 150px;
 	}
+	.container .about .title-h2 {font-size: 22px;margin-bottom: 20px;background: #2a7497;padding: 10px 0;width: 200px;text-align: center;border-radius: 0 30px 30px 0;box-shadow: #21566f 1px 1px 1px;border-left: #dae1e4 6px solid;margin-left: 20px;color: #fff;margin-top: 40px;}
 	.container .work-exprience-detail ul > li h2{
 	    margin-top: 0px;
 	    padding: 0 0 10px 0;
@@ -109,51 +112,78 @@
 	<section>
 		<article>
 			<div class="container">
-				<div class="work-exprience-detail">
-					<ul class="cbp_tmtimeline">
-						<li>
-							<time class="cbp_tmtime"><span>01-17</span> <span>2018</span></time>
-							<div class="cbp_tmicon"></div>
-							<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s">
-								<h2><span>南京宜电慧创信息科技有限公司</span><span style="float:right">前端开发工程师</span></h2>
-								 <p>
-								 	<span class="blogpic"><a href="/"><img src="../../../img/yidian.png"></a></span>
-								 	1、<br/>
-								 	2、<br/>
-								 	3、<br/>
-								 	4、<br/>
-								 </p>
-							</div>
-						</li>
-						<li>
-							<time class="cbp_tmtime"><span>01-17</span> <span>2018</span></time>
-							<div class="cbp_tmicon"></div>
-							<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s">
-								<h2><span>南京途牛信息科技有限公司</span><span style="float:right">前端开发工程师</span></h2>
-								 <p>
-								 	<span class="blogpic"><a href="/"><img src="../../../img/tuniu.png"></a></span>
-								 	1、<br/>
-								 	2、<br/>
-								 	3、<br/>
-								 	4、<br/>
-								 </p>
-							</div>
-						</li>
-						<li>
-							<time class="cbp_tmtime"><span>01-17</span> <span>2018</span></time>
-							<div class="cbp_tmicon"></div>
-							<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s">
-								<h2><span>南京宜电慧创信息科技有限公司</span><span style="float:right">前端开发工程师</span></h2>
-								 <p>
-								 	<span class="blogpic"><a href="/"><img src="../../../img/yidian.png"></a></span>
-								 	1、<br/>
-								 	2、<br/>
-								 	3、<br/>
-								 	4、<br/>
-								 </p>
-							</div>
-						</li>	
-					</ul>
+				<div class="about">
+					<h2 class="title-h2" data-scroll-reveal="enter left over 1s">我的技能</h2>
+					<div class="blog-detail" style="margin-top: 0;">
+						<ul>
+							<p>
+							    (本文由前端工程师steven沈文杰原创，转载请放原文链接，谢谢！)
+							</p>
+						</ul>
+					</div>
+					<h2 class="title-h2" data-scroll-reveal="enter left over 1s">工作经历</h2>
+					<div class="work-exprience-detail">
+						<ul class="cbp_tmtimeline">
+							<li>
+								<time class="cbp_tmtime"><span>01-17</span> <span>2018</span></time>
+								<div class="cbp_tmicon"></div>
+								<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s">
+									<h2><span>南京宜电慧创信息科技有限公司</span><span style="float:right">前端开发工程师</span></h2>
+									 <p>
+									 	<span class="blogpic"><a href="/"><img src="../../../img/yidian.png"></a></span>
+									 	1、<br/>
+									 	2、<br/>
+									 	3、<br/>
+									 	4、<br/>
+									 </p>
+								</div>
+							</li>
+							<li>
+								<time class="cbp_tmtime"><span>01-17</span> <span>2018</span></time>
+								<div class="cbp_tmicon"></div>
+								<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s">
+									<h2><span>南京途牛信息科技有限公司</span><span style="float:right">前端开发工程师</span></h2>
+									 <p>
+									 	<span class="blogpic"><a href="/"><img src="../../../img/tuniu.png"></a></span>
+									 	1、<br/>
+									 	2、<br/>
+									 	3、<br/>
+									 	4、<br/>
+									 </p>
+								</div>
+							</li>
+							<li>
+								<time class="cbp_tmtime"><span>01-17</span> <span>2018</span></time>
+								<div class="cbp_tmicon"></div>
+								<div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s">
+									<h2><span>南京宜电慧创信息科技有限公司</span><span style="float:right">前端开发工程师</span></h2>
+									 <p>
+									 	<span class="blogpic"><a href="/"><img src="../../../img/yidian.png"></a></span>
+									 	1、<br/>
+									 	2、<br/>
+									 	3、<br/>
+									 	4、<br/>
+									 </p>
+								</div>
+							</li>	
+						</ul>
+					</div>
+					<h2 class="title-h2" data-scroll-reveal="enter left over 1s">项目经验</h2>
+					<div class="blog-detail" style="margin-top: 0;">
+						<ul>
+							<p>
+							    (本文由前端工程师steven沈文杰原创，转载请放原文链接，谢谢！)
+							</p>
+						</ul>
+					</div>
+					<h2 class="title-h2" data-scroll-reveal="enter left over 1s">自我评价</h2>
+					<div class="blog-detail" style="margin-top: 0;">
+						<ul>
+							<p>
+							    (本文由前端工程师steven沈文杰原创，转载请放原文链接，谢谢！)
+							</p>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</article>>

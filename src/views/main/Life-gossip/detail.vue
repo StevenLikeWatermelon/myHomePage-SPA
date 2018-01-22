@@ -1,32 +1,3 @@
-<style>
-	.container .blog-detail {
-		width: 90%;
-	    margin: 30px auto;
-	    overflow: hidden;
-	    line-height: 22px;
-	}
-	.container h4.article {
-		font-size: 18px;
-		color: #fff;
-    	margin-bottom: 30px;
-     	text-align: center; 
-	}
-	.container .blog-detail ul p {
-		color: #fff;
-		margin-bottom: 20px;
-		text-align: left;
-		font-size: 14px;
-	}
-	.container .blog-detail ul p img{
-		max-width: 100%;
-		height: auto;
-	}
-	.container .blog-detail ul {
-		padding: 0;
-		margin: 0;
-	}
-</style>
-
 <template>
 	<section>
 		<article   v-loading="loading"  element-loading-text="拼命加载中"  element-loading-spinner="el-icon-loading" element-loading-background="rgba(180, 180, 180, 0.8)">
@@ -73,7 +44,7 @@
     		getArticleDetail() {
 	    		// 获取文章详情
 	    		this.loading = true;
-	    		this.$http.get('src/phpCtrl/articleDetail.php', {
+	    		this.$http.get('src/phpCtrl/lifeArticleDetail.php', {
 	    			params: {
 	    				id: this.$route.query.id
 	    			}

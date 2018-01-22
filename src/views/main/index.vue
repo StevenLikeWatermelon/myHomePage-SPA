@@ -2,11 +2,11 @@
     .steven-index {
 	  position: absolute;
 	  text-align: center;
-	  width: 275px;
-	  height: 124px;
+	  width: 299px;
+	  height: 136px;
 	  left: 50%;
 	  top: 25%;
-	  padding: 65px;
+	  padding: 60px;
 	  background: rgba(255, 255, 255, 0.8);
 	  outline: 4px double #FFFFFF;
 	  outline-offset: 8px;
@@ -27,7 +27,7 @@
 		background-color: #c9cbb6;
 		border-radius: 19px;
 		text-shadow:0 0 5px #CCCCCC, 0 0 10px #CCCCCC, 0 0 15px #CCCCCC, 0 0 20px #095816, 0 0 25px #095816, 0 0 30px #095816, 0 0 50px #095816, 0 0 80px #095816, 0 0 100px #095816, 0 0 150px #095816;
-		width: 209px;
+		width: 280px;
 		display: block;
 		font-weight: 500;
 		height: 40px;
@@ -79,7 +79,7 @@
 		<div class="steven-index">
 			<span class="line-color">欢迎来到我的小屋</span>
 			<div class="mikry" style="padding-top: 40px;">
-				<span>简单工作，快乐生活</span>
+				<span>精益求精工作,简单快乐生活</span>
 			</div>
 		</div>
 	</section>
