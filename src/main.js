@@ -43,10 +43,10 @@ let systemType = {
 let isPC = false;
 //检测平台
 let currentPlatform = navigator.platform;
-system.win = currentPlatform.indexOf("Win") == 0;
-system.mac = currentPlatform.indexOf("Mac") == 0;
-system.x11 = (currentPlatform == "X11") || (currentPlatform.indexOf("Linux") == 0);
-system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+systemType.win = currentPlatform.indexOf("Win") == 0;
+systemType.mac = currentPlatform.indexOf("Mac") == 0;
+systemType.x11 = (currentPlatform == "X11") || (currentPlatform.indexOf("Linux") == 0);
+systemType.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
 
 for (let key in systemType) {
 	if (systemType.hasOwnProperty(key)) {

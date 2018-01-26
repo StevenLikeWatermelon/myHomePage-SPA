@@ -1,25 +1,59 @@
 <style>
-    .steven-index {
-	  position: absolute;
-	  text-align: center;
-	  width: 299px;
-	  height: 136px;
-	  left: 50%;
-	  top: 25%;
-	  padding: 60px;
-	  background: rgba(255, 255, 255, 0.8);
-	  outline: 4px double #FFFFFF;
-	  outline-offset: 8px;
-	  -webkit-animation: bounceInRight 1s ease 1 forwards;
-    }
+	@media only screen and (min-width:992px) {
+	    .steven-index {
+		  position: absolute;
+		  text-align: center;
+		  width: 299px;
+		  height: 136px;
+		  left: 50%;
+		  top: 25%;
+		  padding: 60px;
+		  background: rgba(255, 255, 255, 0.8);
+		  outline: 4px double #FFFFFF;
+		  outline-offset: 8px;
+		  -webkit-animation: bounceInRight 1s ease 1 forwards;
+	    }
+	    .m-line-color {
+	    	display: none;
+	    }
+		#home .line-color{
+			font-size: 1.7rem;
+			background-image: -webkit-linear-gradient(left, #409eff, #fbe500 25%, #409eff 50%, #fbe500 75%, #409eff);
+			background-size: 200%;
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			-webkit-animation: anim 4s infinite linear;
+		}
+	}
 
-	#home .line-color{
-		font-size: 1.7rem;
-		background-image: -webkit-linear-gradient(left, #409eff, #fbe500 25%, #409eff 50%, #fbe500 75%, #409eff);
-		background-size: 200%;
-		-webkit-text-fill-color: transparent;
-		-webkit-background-clip: text;
-		-webkit-animation: anim 4s infinite linear;
+	@media only screen and (max-width:992px) {
+	    .steven-index {
+		  position: absolute;
+		  text-align: center;
+		  width: 220px;
+		  height: 100px;
+		  left: 50%;
+		  top: 25%;
+		  padding: 35px;
+		  background: rgba(255, 255, 255, 0.8);
+		  outline: 4px double #FFFFFF;
+		  outline-offset: 8px;
+		  -webkit-animation: bounceInRight 1s ease 1 forwards;
+	    }
+	    #home .line-color {
+	    	display: none;
+	    }
+		#home .m-line-color {
+			font-size: 1.2rem;
+			background-image: -webkit-linear-gradient(left, #409eff, #fbe500 25%, #409eff 50%, #fbe500 75%, #409eff);
+			background-size: 200%;
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+			-webkit-animation: anim 4s infinite linear;
+		}
+		#home .mikry, #home .mikry span {
+			display: none;
+		}
 	}
 
 	#home .mikry span{
@@ -78,6 +112,8 @@
 	<section id="home">
 		<div class="steven-index">
 			<span class="line-color">欢迎来到我的小屋</span>
+			<p class="m-line-color">M站暂未开发</p>
+			<p class="m-line-color">请移步PC端访问哦</p>
 			<div class="mikry" style="padding-top: 40px;">
 				<span>精益求精工作,简单快乐生活</span>
 			</div>
