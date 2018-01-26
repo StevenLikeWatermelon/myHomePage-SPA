@@ -32,22 +32,53 @@ const routerConfig = {
 	routes: routersArr
 }
 const router = new VueRouter(routerConfig);
+
+// 判断访问终端类型开始 //
+let systemType = {
+    win: false,
+    mac: false,
+    xll: false,
+    ipad:false
+};
+let isPC = false;
+//检测平台
+let currentPlatform = navigator.platform;
+system.win = currentPlatform.indexOf("Win") == 0;
+system.mac = currentPlatform.indexOf("Mac") == 0;
+system.x11 = (currentPlatform == "X11") || (currentPlatform.indexOf("Linux") == 0);
+system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+
+for (let key in systemType) {
+	if (systemType.hasOwnProperty(key)) {
+		if (systemType[key]) {
+			isPC = true;
+		}
+	}
+}
+// 判断访问终端类型结束 //
+
 router.beforeEach((to, from, next) => {
 	let notFound = true;
-	routersArr.forEach(item => {
-		let routerInfo = item.children;
-		routerInfo.forEach(item => {
-			if (to.name == item.name) {
-				notFound = false;
-			}
+	if (isPC) {
+		routersArr.forEach(item => {
+			let routerInfo = item.children;
+			routerInfo.forEach(item => {
+				if (to.name == item.name) {
+					notFound = false;
+				}
+			});
 		});
-	});
-	if (notFound) {
-		next({
-            name: 'home_index'
-        });
+		if (notFound) {
+			next({
+	            name: 'home_index'
+	        });
+		} else {
+			next();
+		}
 	} else {
-		next();
+		next({
+            name: 'm-index'
+        });
 	}
 });
 

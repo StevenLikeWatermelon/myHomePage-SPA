@@ -17,6 +17,5 @@
 	    min-height: 1000px;
 	    width: 100%;
 	    display: block;
-	    font: 14px "微软雅黑", Arial, Helvetica, sans-serif;
 	}
 </style>

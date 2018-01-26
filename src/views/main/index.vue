@@ -14,7 +14,7 @@
     }
 
 	#home .line-color{
-		font-size: 2em;
+		font-size: 1.7rem;
 		background-image: -webkit-linear-gradient(left, #409eff, #fbe500 25%, #409eff 50%, #fbe500 75%, #409eff);
 		background-size: 200%;
 		-webkit-text-fill-color: transparent;
