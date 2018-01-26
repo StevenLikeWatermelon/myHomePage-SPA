@@ -44,7 +44,7 @@
 						<router-link to="/index"><img :src="imgUrl"></router-link>
 					</div>
 				</el-col>
-				<el-col :xs="0" :md="16" :sm="0">
+				<el-col :xs="0" :md="16" :sm="16">
 					<div>
 						<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
 							<el-menu-item v-for="item in menuList" :index="item.index" :key="item.index" @click="goRouter(item.name)">
