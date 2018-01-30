@@ -39,9 +39,6 @@
 						</h4>
 						<div v-html="detail.content"></div>
 						<p>
-						    &nbsp;&nbsp;
-						</p>
-						<p>
 						    (本文由前端工程师steven沈文杰原创，转载请放原文链接，谢谢！)
 						</p>
 						<p style="text-align: center;color: #3ae810">#个人原创，难免有错误之处，欢迎各位留言批评指正! 谢谢!#</p>
@@ -51,7 +48,7 @@
 					</ul>
 				</div>
 			</div>
-		</article>>
+		</article>
 	</section>
 </template>
 

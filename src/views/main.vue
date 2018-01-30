@@ -16,7 +16,9 @@
 <div class="main">
 	<header-tpl></header-tpl>
 	<div class="content">
-		<router-view></router-view>
+		<keep-alive :include="cachePage">
+			<router-view></router-view>
+		</keep-alive>
 	</div>
 </div>
 </template>
@@ -24,6 +26,11 @@
 <script>
 	import headerTpl from './components/header.vue';
     export default {
+    	data () {
+    		return {
+    			cachePage: ['contact-me']
+    		}
+    	},
     	components: {
     		headerTpl
     	}
