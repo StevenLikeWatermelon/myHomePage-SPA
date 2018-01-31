@@ -80,7 +80,7 @@
 	    			this.detail.time = res.data.createTime;
 	    			this.loading = false;
 	    		}).catch(err => {
-	    			this.$Message.error('获取文章详情失败!');
+	    			this.$message.error('获取文章详情失败!');
 	    			console.log(err)
 	    		});
     		},

@@ -93,11 +93,11 @@
 	    			if (res && res.data && res.data.length) {
 	    				this.articleList = res.data;
 	    			} else {
-	    				this.$Message.error('获取文章列表为空!');
+	    				this.$message.error('获取文章列表为空!');
 	    			}
 	    			this.loading = false;
 	    		}).catch(err => {
-	    			this.$Message.error('获取文章列表失败!');
+	    			this.$message.error('获取文章列表失败!');
 	    			console.log(err)
 	    		});
     		},

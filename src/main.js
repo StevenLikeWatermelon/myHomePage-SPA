@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import {Row, Col, Menu, MenuItem, Button, Loading} from 'element-ui'
+import {Row, Col, Menu, MenuItem, Button, Loading, Input, Message} from 'element-ui'
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import {routersArr} from './router';
@@ -13,6 +13,8 @@ Vue.use(Menu);
 Vue.use(Button);
 Vue.use(Loading);
 Vue.use(MenuItem);
+Vue.use(Input);
+
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
@@ -26,6 +28,7 @@ axios.interceptors.request.use(function(config){
   return Promise.reject(error);
 });
 Vue.prototype.$http = axios;
+Vue.prototype.$message = Message;
 
 // router
 const routerConfig = {
@@ -60,7 +63,6 @@ const store = new Vuex.Store({
 	state: {
 		currentRouteIndex: 0, //默认首页
 		menuList: []
-
 	},
 	mutations: {
 		getCurrentMenuList (state, name) {
@@ -82,7 +84,7 @@ const store = new Vuex.Store({
 					}
 				});
 			});
-		},
+		}
 	}
 });
 

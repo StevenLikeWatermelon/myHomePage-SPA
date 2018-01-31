@@ -56,9 +56,9 @@
     	},
     	methods: {
     	},
-    	mounted () {
-    		window.startScroll = new scrollReveal({reset: true});
-    	},
+		activated() {
+			window.startScroll = new scrollReveal({reset: true});
+		},
     	created () {
 		    var appid = 'cytrsFhPb';
 		    var conf = 'prod_e4aa56ee5d4c9fe2df62c5ca876a7bae';
