@@ -10,7 +10,7 @@
 	    width: 100%;
 	    height: 50px;
 	    opacity: 0.5;
-	    z-index: 1;
+	    z-index: 999;
 	    top: 0;
 	    left: 0;
 	    border-bottom: 1px solid #f1f1f1;
