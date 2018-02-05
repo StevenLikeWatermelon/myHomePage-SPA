@@ -26,7 +26,7 @@
 
 <template>
 	<section>
-		<article>
+		<article v-loading="loading"  element-loading-text="拼命加载中"  element-loading-spinner="el-icon-loading" element-loading-background="rgba(180, 180, 180, 0.8)">
 			<div class="container">
 			    <div class="banner">
 			      <p data-scroll-reveal="enter top over 2s">生命是场旅行，相遇是种缘分，相识是种幸运</p>
@@ -52,6 +52,7 @@
     	name: 'contact-me',
     	data () {
     		return {
+    			loading: false
     		}
     	},
     	methods: {
@@ -60,6 +61,7 @@
 			window.startScroll = new scrollReveal({reset: true});
 		},
     	created () {
+    		this.loading = true;
 		    var appid = 'cytrsFhPb';
 		    var conf = 'prod_e4aa56ee5d4c9fe2df62c5ca876a7bae';
 		    var width = window.innerWidth || document.documentElement.clientWidth;
@@ -70,7 +72,11 @@
 		            b.setAttribute("charset", "UTF-8");
 		            b.setAttribute("src", d); if (typeof a === "function") { if (window.attachEvent) { b.onreadystatechange = function() { var e = b.readyState; if (e === "loaded" || e === "complete") { b.onreadystatechange = null;
 		                            a() } } } else { b.onload = a } } c.appendChild(b) };
-		        loadJs("http://changyan.sohu.com/upload/changyan.js", function() { window.changyan.api.config({ appid: appid, conf: conf }) }); }
+		        loadJs("http://changyan.sohu.com/upload/changyan.js", function() { window.changyan.api.config({ appid: appid, conf: conf }) }); 
+		    }
+		    setTimeout(()=> {
+		    	this.loading = false;
+		    }, 700);
     	}
     };
 </script>
