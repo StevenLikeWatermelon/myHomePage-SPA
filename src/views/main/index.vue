@@ -1,121 +1,69 @@
 <style>
-	@media only screen and (min-width:992px) {
-	    .steven-index {
-		  position: absolute;
-		  text-align: center;
-		  width: 299px;
-		  height: 136px;
-		  left: 50%;
-		  top: 25%;
-		  padding: 60px;
-		  background: rgba(255, 255, 255, 0.8);
-		  outline: 4px double #FFFFFF;
-		  outline-offset: 8px;
-		  -webkit-animation: bounceInRight 1s ease 1 forwards;
-	    }
-	    .m-line-color {
-	    	display: none;
-	    }
-		#home .line-color{
-			font-size: 1.7rem;
-			background-image: -webkit-linear-gradient(left, #409eff, #fbe500 25%, #409eff 50%, #fbe500 75%, #409eff);
-			background-size: 200%;
-			-webkit-text-fill-color: transparent;
-			-webkit-background-clip: text;
-			-webkit-animation: anim 4s infinite linear;
-		}
+	.classBanner {
+		background: url(../../../src/img/indexBanner.png);
+		max-width: 1920px;
+		width: 100%;
+		height: 800px;
+		max-height: 800px;
+		margin-top: -50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
-
-	@media only screen and (max-width:992px) {
-	    .steven-index {
-		  position: absolute;
-		  text-align: center;
-		  width: 220px;
-		  height: 100px;
-		  left: 50%;
-		  top: 25%;
-		  padding: 35px;
-		  background: rgba(255, 255, 255, 0.8);
-		  outline: 4px double #FFFFFF;
-		  outline-offset: 8px;
-		  -webkit-animation: bounceInRight 1s ease 1 forwards;
-	    }
-	    #home .line-color {
-	    	display: none;
-	    }
-		#home .m-line-color {
-			font-size: 1.2rem;
-			background-image: -webkit-linear-gradient(left, #409eff, #fbe500 25%, #409eff 50%, #fbe500 75%, #409eff);
-			background-size: 200%;
-			-webkit-text-fill-color: transparent;
-			-webkit-background-clip: text;
-			-webkit-animation: anim 4s infinite linear;
-		}
-		#home .mikry, #home .mikry span {
-			display: none;
-		}
+	.indexBannerContent {
+		width: 425px;
+		text-align: center;
+		color: #a75c5c;
 	}
-
-	#home .mikry span{
-		color: #fff;
-		background-color: #c9cbb6;
-		border-radius: 19px;
-		text-shadow:0 0 5px #CCCCCC, 0 0 10px #CCCCCC, 0 0 15px #CCCCCC, 0 0 20px #095816, 0 0 25px #095816, 0 0 30px #095816, 0 0 50px #095816, 0 0 80px #095816, 0 0 100px #095816, 0 0 150px #095816;
-		width: 280px;
-		display: block;
-		font-weight: 500;
-		height: 40px;
-		line-height: 40px;
-		font-size: 21px;
-		margin: 0 auto;
-		-webkit-animation: tada 1s ease 1s 2;
+	.personalIntroduce {
+		background: #fff;
+		max-width: 1920px;
+		width: 100%;
+		height: 400px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
 	}
-
-	@-webkit-keyframes anim{
-		0%{
-			background-position: 0 0;
-		}
-		100%{
-			background-position: -100% 0;
-		}
+	.personalBkg {
+		background: url(../../../src/img/personal.jpg)  -146px -32px;
+		width: 300px;
+		height: 300px;
+		border-radius: 170px;
+		line-height: 300px;
+		text-align: center;
 	}
-
-
-	@-webkit-keyframes bounceInRight {
-		0% {
-			-webkit-transform: translateX(2000px);
-		}
-		
-		60% {
-			-webkit-transform: translateX(-60%);
-		}
-		
-		80% {
-			-webkit-transform: translateX(-46%);
-		}
-		
-		100% {
-			-webkit-transform: translateX(-50%);
-		}
-	}
-
-	@-webkit-keyframes tada {
-		0% {-webkit-transform: scale(1);}	
-		10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
-		30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
-		40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
-		100% {-webkit-transform: scale(1) rotate(0);}
+	.personalDiscription {
+	    color: #6d6571;
+	    font-size: 15px;
+	    width: 500px;
 	}
 </style>
 
 <template>
 	<section id="home">
-		<div class="steven-index">
-			<span class="line-color">欢迎来到我的小屋</span>
-			<p class="m-line-color">M站暂未开发</p>
-			<p class="m-line-color">请移步PC端访问哦</p>
-			<div class="mikry" style="padding-top: 40px;">
-				<span>精益求精工作,简单快乐生活</span>
+		<div class="classBanner">
+			<div class="indexBannerContent">
+				<p style="font-size: 50px;margin-top: -100px;margin-bottom: 25px;">STEVEN   BLOG</p>
+				<p>生命是一场奇妙的单程旅行，秉怀敬畏之心，一路去感受、去冒险、去探索，与自己为敌, 与自己为友, 一边深挖思想, 一边埋葬自己。</p>
+				<div style="width:100%; height: 40px;margin-top:40px;">
+					<el-button type="default" style="float:left;background: #ffffffa3" @click="goRouter()">前端博客</el-button>
+					<el-button type="default" style="float:right;background: #ffffffa3"><a href="https://github.com/StevenLikeWatermelon" target="_blank" style="text-decoration: none;color: inherit;">GitHub</a></el-button>
+				</div>
+			</div>
+		</div>
+		<div class="personalIntroduce">
+			<div class="personalDiscription">
+				<p style="margin:0;padding:0">个人资料:</p>
+				<p>90后，男，黑框眼镜、双肩包、寸板头、格子衫，是的，博主就是典型的程序员，非科班半路出家，自学暂未成才。</p>
+				<p>性格慢热，助人为乐，喜欢思考，喜欢钻研，与JS为伍，与bug为敌，热爱前端开发、热爱互联网、热爱游戏、热爱生活。</p>
+			</div>
+			<div>
+				<div class="personalBkg"></div>
+			</div>
+			<div class="personalDiscription">
+				<p style="margin:0;padding:0">生活情况:</p>
+				<p>博主已婚，定居南京，平时爱好看书、修手机、看新闻、玩游戏、跑步、写代码、发呆，兴趣爱好广泛。</p>
+				<p>希望能结交志同道合的朋友，聊前端、聊互联网、聊程序员、聊生活、聊人生。</p> 
 			</div>
 		</div>
 	</section>
@@ -124,6 +72,18 @@
 
 <script>
     export default {
+    	data () {
+    		return {
 
+    		}
+    	},
+    	methods: {
+    		goRouter () {
+    			this.$router.push({name: 'IT_share_index'});
+    		},
+    		goGitHub () {
+    			window.location.href = '';
+    		}
+    	}
     };
 </script>
