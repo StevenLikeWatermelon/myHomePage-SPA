@@ -1,13 +1,7 @@
 <style>
-	.main {
-		width: 100%;
-		height: 100%;
-	}
 	.content {
-		width: 100%;
-		height: 100%;
-		margin-top: 50px;
-		position: absolute;
+		margin-top: -50px;
+		padding-top: 100px;
 	}
 	.ivu-modal-mask {
 	    position: fixed;
@@ -147,26 +141,20 @@
 </style>
 
 <template>
-<div class="main">
-	<header-tpl></header-tpl>
 	<div class="content">
 		<keep-alive :include="cachePage">
 			<router-view></router-view>
 		</keep-alive>
 	</div>
-</div>
 </template>
 
 <script>
-	import headerTpl from './components/header.vue';
+	
     export default {
     	data () {
     		return {
-    			cachePage: ['contact-me', 'work-experience']
+    			cachePage: ['pc-index', 'contact-me', 'work-experience']
     		}
-    	},
-    	components: {
-    		headerTpl
     	}
     };
 </script>

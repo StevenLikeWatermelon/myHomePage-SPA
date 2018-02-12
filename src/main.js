@@ -62,7 +62,8 @@ router.afterEach(() => {
 const store = new Vuex.Store({
 	state: {
 		currentRouteIndex: 0, //默认首页
-		menuList: []
+		menuList: [],
+		globalLoading: true
 	},
 	mutations: {
 		getCurrentMenuList (state, name) {
@@ -84,6 +85,9 @@ const store = new Vuex.Store({
 					}
 				});
 			});
+		},
+		changeGolbalView (state, value) {
+			state.globalLoading = value;
 		}
 	}
 });

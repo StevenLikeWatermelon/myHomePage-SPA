@@ -8,7 +8,7 @@
 						<p class="title">{{item.title}}</p>
 						<figcaption>
 							<p>{{item.discription}}</p>
-							<p style="float:right;margin: -20px 10px 0 0;font-weight:700">{{item.createTime}}</p>
+							<p style="float:right;margin: -9px 10px 0 0;font-weight:700">{{item.createTime}}</p>
 						</figcaption>
 					</figure>
 				</div>

@@ -1,17 +1,30 @@
 <template>
-	<div id="main" class="main-class">
-		<router-view></router-view>
+	<div class="myApp" v-show="globalShow">
+		<header-tpl ></header-tpl>
+		<router-view  class="main-class"></router-view>
 	</div>
 </template>
 
 <script>
+	import headerTpl from './views/components/header.vue';
 	export default {
-
+		data () {
+			return {
+			}
+		},
+    	components: {
+    		headerTpl
+    	},
+		computed: {
+			globalShow () {
+				return this.$store.state.globalLoading;
+			}
+		}
 	};
 </script>
 
 <style>
-	body {
+	.main-class {
     	background: url(./img/hero1.jpg) no-repeat top left #075498;
 	    min-width: 100%;
 	    min-height: 1000px;

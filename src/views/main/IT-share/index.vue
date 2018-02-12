@@ -28,6 +28,9 @@
 	    cursor: pointer;
 	    margin-bottom: 15px;
     }
+    .blog figure:hover {
+		box-shadow: 4px 4px 16px #5d5b5b;
+    }
     .blog figure img {
     	width: 270px;
     	height: 165px;
@@ -47,10 +50,10 @@
 	    line-height: 22px;
 	    color: #666;
 	    overflow: hidden;
-	    margin-top: -13px;
 	    height: 60px;
 	    overflow: hidden;
 	    font-size: 12px;
+	    margin-top: -3px;
 	}
 </style>
 
@@ -64,7 +67,7 @@
 						<p class="title">{{item.title}}</p>
 						<figcaption>
 							<p>{{item.discription}}</p>
-							<p style="float:right;margin: -20px 10px 0 0;font-weight:700">{{item.createTime}}</p>
+							<p style="float:right;margin: -9px 10px 0 0;font-weight:700">{{item.createTime}}</p>
 						</figcaption>
 					</figure>
 				</div>
@@ -79,10 +82,7 @@
     	data () {
     		return {
     			loading: false,
-    			articleList: [],
-    			numArr: [23,44,566,7,878,989,32],
-	    		percentArr:[],
-	    		displayArr: ''
+    			articleList: []
     		}
     	},
     	methods: {
