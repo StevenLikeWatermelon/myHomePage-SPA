@@ -17,7 +17,6 @@
 	}
 	.personalIntroduce {
 		background: #fff;
-		max-width: 1920px;
 		width: 100%;
 		height: 400px;
 		margin-top: -50px;
@@ -38,7 +37,6 @@
 	}
 	.contactType {
 		background: url(../../../src/img/contact.jpg);
-		max-width: 1920px;
 		width: 100%;
 		height: 240px;
 		display: flex;
