@@ -38,20 +38,36 @@ const router = new VueRouter(routerConfig);
 
 router.beforeEach((to, from, next) => {
 	let notFound = true;
+	let cuurentName = '';
 	routersArr.forEach(item => {
 		let routerInfo = item.children;
 		routerInfo.forEach(item => {
 			if (to.name == item.name) {
 				notFound = false;
+				cuurentName = to.name;
 			}
 		});
 	});
+	// 404处理
 	if (notFound) {
 		next({
             name: 'home_index'
         });
 	} else {
-		next();
+		// PC M 自适应
+		let width = window.innerWidth || document.documentElement.clientWidth;
+		let isMRouter = cuurentName.slice(-2) === '_m' ? true : false;
+		if (width <= 960 && !isMRouter) {
+			next({
+	            name: cuurentName + '_m'
+	        });
+		} else if (width > 960 && isMRouter) {
+			next({
+	            name: cuurentName.slice(0, -2)
+	        });
+		} else {
+			next();
+		}
 	}
 });
 

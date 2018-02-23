@@ -36,6 +36,8 @@
 	    color: #6d6571;
 	    font-size: 15px;
 	    width: 500px;
+	    height: 107px;
+	    padding: 20px;
 	}
 	.contactType {
 		background: url(../../../src/img/contact.jpg);
@@ -85,15 +87,15 @@
 			</div>
 		</div>
 		<div class="personalIntroduce">
-			<div class="personalDiscription" data-scroll-reveal="enter top over 1s">
+			<div class="personalDiscription">
 				<p>个人资料:</p>
 				<p>90后，男，黑框眼镜、双肩包、寸板头、格子衫，是的，博主就是典型的程序员，非科班半路出家，自学暂未成才。</p>
 				<p>性格慢热，助人为乐，喜欢思考，喜欢钻研，与JS为伍，与bug为敌，热爱前端开发、热爱互联网、热爱游戏、热爱生活。</p>
 			</div>
 			<div>
-				<div class="personalBkg" data-scroll-reveal="enter top over 1s"></div>
+				<div class="personalBkg"></div>
 			</div>
-			<div class="personalDiscription" data-scroll-reveal="enter top over 1s">
+			<div class="personalDiscription">
 				<p>生活情况:</p>
 				<p>博主已婚，定居南京，平时爱好看书、修手机、看新闻、玩游戏、跑步、写代码、发呆，兴趣爱好广泛。</p>
 				<p>希望能结交志同道合的朋友，聊前端、聊互联网、聊程序员、聊生活、聊人生。</p> 
