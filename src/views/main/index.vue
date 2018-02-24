@@ -79,7 +79,8 @@
 		<div class="classBanner">
 			<div class="indexBannerContent">
 				<p style="font-size: 50px;margin-top: -100px;margin-bottom: 25px;text-shadow: 3px 3px 6px #a75c5c;">STEVEN   BLOG</p>
-				<p style="font-size: 16px;text-shadow: 1px 1px 10px #a75c5c;">生命是一场奇妙的单程旅行，秉怀敬畏之心，一路去感受、去冒险、去探索，与自己为敌, 与自己为友, 一边深挖思想, 一边埋葬自己。</p>
+				<p style="font-size: 16px;text-shadow: 1px 1px 10px #a75c5c;">Stay hungry. Stay foolish. Keep learning. Keep walking.</p>
+				<p style="font-size: 16px;text-shadow: 1px 1px 10px #a75c5c;margin-top:8px;">Maybe I am a slow walker, but I never walk backwards.</p>
 				<div style="width:100%; height: 40px;margin-top:40px;">
 					<el-button type="default" style="float:left;background: #ffffffa3" @click="goRouter()">前端博客</el-button>
 					<a href="https://github.com/StevenLikeWatermelon" target="_blank" style="text-decoration: none;color: inherit;float:right;background: #ffffffa3;border-radius: 4px;"><el-button type="default" style="float:right;background: transparent">GitHub</el-button></a>

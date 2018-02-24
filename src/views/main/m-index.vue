@@ -74,7 +74,8 @@
 		<div class="classBanner">
 			<div class="indexBannerContent">
 				<p style="font-size: 28px;margin-top: -100px;margin-bottom: 25px;text-shadow: 3px 3px 6px #a75c5c;">STEVEN   BLOG</p>
-				<p style="font-size: 14px;text-shadow: 1px 1px 10px #a75c5c;">生命是一场奇妙的单程旅行，秉怀敬畏之心，一路去感受、去冒险、去探索，与自己为敌, 与自己为友, 一边深挖思想, 一边埋葬自己。</p>
+				<p style="font-size: 14px;text-shadow: 1px 1px 10px #a75c5c;">Stay hungry. Stay foolish. Keep learning. Keep walking.</p>
+				<p style="font-size: 14px;text-shadow: 1px 1px 10px #a75c5c;margin-top:8px;">Maybe I am a slow walker, but I never walk backwards.</p>
 				<div style="width:100%; height: 40px;margin-top:70px;">
 					<el-button type="default" style="float:left;background-color: rgba(255, 255, 255, 0.3);width: 100px;" @click="goRouter()">前端博客</el-button>
 					<a href="https://github.com/StevenLikeWatermelon" target="_blank" style="text-decoration: none;color: inherit;float:right;background-color: rgba(255, 255, 255, 0.3);border-radius: 4px;border: 1px solid #ffffff;"><el-button type="default" style="float:right;background: transparent;width: 100px;border:none">GitHub</el-button></a>
@@ -86,7 +87,7 @@
 				<div style="width:100%; height:100%; background-color: rgba(5, 8, 14, 0.4);border-radius:inherit;display:flex; justify-content:center; align-items:center; line-height:200%">
 					<div style="padding: 0 10px 0 10px;" data-scroll-reveal="enter right over 1s">
 						<p style="font-weight: 700; font-size:18px;">关于博主:</p>
-						<p>90后，男，黑框眼镜、双肩包、寸板头、格子衫，是的，博主就是典型的程序员，非科班半路出家，自学暂未成才。</p>
+						<p>90后，男，黑框眼镜、双肩包、寸板头、格子衫---博主就是典型的程序员，非科班半路出家，自学暂未成才。</p>
 						<p>性格慢热，助人为乐，喜欢思考，喜欢钻研，与JS为伍，与bug为敌，热爱前端开发、热爱互联网、热爱游戏、热爱生活。</p>
 						<p>博主已婚，定居南京，平时爱好看书、修手机、看新闻、玩游戏、跑步、写代码、发呆，兴趣爱好广泛。</p>
 						<p>希望能结交志同道合的朋友，聊前端、聊互联网、聊程序员、聊生活、聊人生。</p> 
@@ -133,10 +134,10 @@
     	},
     	methods: {
     		goRouter () {
-    			this.$router.push({name: 'IT_share_index'});
+    			this.$router.push({name: 'IT_share_index_m'});
     		},
     		goDetail (id, type) {
-    			let tmpRouterName = type == 1 ? 'IT_share_detail' : 'Life-gossip-detail';
+    			let tmpRouterName = type == 1 ? 'IT_share_detail_m' : 'Life-gossip-detail_m';
 				this.$router.push({
 					name: tmpRouterName,
 					query: {id: id}
@@ -167,14 +168,14 @@
 			    			}
 			    			this.loading = false;
 			    		}).catch(err => {
-			    			// this.$message.error('获取文章列表失败!');
+			    			this.$message.error('获取文章列表失败!');
 			    			console.log(err)
 			    		});
 	    			} else {
 	    				this.$message.error('获取文章列表为空!');
 	    			}
 	    		}).catch(err => {
-	    			// this.$message.error('获取文章列表失败!');
+	    			this.$message.error('获取文章列表失败!');
 	    			console.log(err)
 	    		});
     		}

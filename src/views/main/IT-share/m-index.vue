@@ -1,41 +1,41 @@
 <style>
-    article {
+    article.m-IT {
     	display: block;
 		background: url('../../../img/articlebg.png') repeat;
-	    width: 1000px;
-	    margin: 50px auto;
+	    width: 95%;
 	    overflow: hidden;
+	    margin: 30px auto;
     }
-    .container {
+    .container-m {
     	background: url('../../../img/articlebg.png') repeat;
 	    overflow: hidden;
-	    margin: 20px;
+	    margin: 15px;
 	    box-shadow: #075498 0px 1px 10px;
 	   	cursor: pointer;
     }
-    .blog {
-    	margin: 25px 20px;
+    .blog-m {
+    	margin: 15px 10px;
     	overflow: hidden;
+    	display: flex;
+    	justify-content: center;
+    	align-items: flex-start;
+    	flex-wrap: wrap;
     }
-    .blog figure {
+    .blog-m figure {
 	    background: #ececec;
 	    border: #FFF 10px solid;
 	    width: 270px;
 	    height: 320px;
-	    float: left;
-	    margin: 0 8px 0;
-	    overflow: hidden;
 	    cursor: pointer;
-	    margin-bottom: 15px;
     }
-    .blog figure:hover {
+    .blog-m figure:hover {
 		box-shadow: 4px 4px 16px #5d5b5b;
     }
-    .blog figure img {
+    .blog-m figure img {
     	width: 270px;
     	height: 165px;
     }
-    .blog figure .title {
+    .blog-m figure .title {
 	    font-size: 14px;
 	    text-shadow: #fff 1px 1px 0px;
 	    line-height: 26px;
@@ -45,7 +45,7 @@
 	    text-overflow: ellipsis;
 	    margin-top: 10px;
     }
-	.blog figure figcaption p{
+	.blog-m figure figcaption p{
 	    padding: 10px;
 	    line-height: 22px;
 	    color: #666;
@@ -59,9 +59,9 @@
 
 <template>
 	<section>
-		<article  v-loading="loading"  element-loading-text="拼命加载中"  element-loading-spinner="el-icon-loading" element-loading-background="rgba(180, 180, 180, 0.8)">
-			<div class="container">
-				<div class="blog">
+		<article class="m-IT"  v-loading="loading"  element-loading-text="拼命加载中"  element-loading-spinner="el-icon-loading" element-loading-background="rgba(180, 180, 180, 0.8)">
+			<div class="container-m">
+				<div class="blog-m">
 					<figure v-for="item in articleList"  @click="go(item.id)">
 						<img :src="item.type">
 						<p class="title">{{item.title}}</p>
@@ -103,7 +103,7 @@
     		},
 			go(id) {
 				this.$router.push({
-					name: 'IT_share_detail',
+					name: 'IT_share_detail_m',
 					query: {id: id}
 				});
 			}

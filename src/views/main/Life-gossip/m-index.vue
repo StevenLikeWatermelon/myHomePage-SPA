@@ -1,8 +1,8 @@
 <template>
 	<section>
-		<article  v-loading="loading"  element-loading-text="拼命加载中"  element-loading-spinner="el-icon-loading" element-loading-background="rgba(180, 180, 180, 0.8)">
-			<div class="container">
-				<div class="blog">
+		<article class="m-IT"  v-loading="loading"  element-loading-text="拼命加载中"  element-loading-spinner="el-icon-loading" element-loading-background="rgba(180, 180, 180, 0.8)">
+			<div class="container-m">
+				<div class="blog-m">
 					<figure v-for="item in articleList"  @click="go(item.id)">
 						<img :src="item.type">
 						<p class="title">{{item.title}}</p>
@@ -47,7 +47,7 @@
     		},
 			go(id) {
 				this.$router.push({
-					name: 'Life-gossip-detail',
+					name: 'Life-gossip-detail_m',
 					query: {id: id}
 				});
 			}

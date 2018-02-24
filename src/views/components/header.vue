@@ -2,14 +2,14 @@
 	.header {
 		display: block;
 		width: 100%;
-    	z-index: 9999;
+    	z-index: 99;
 	}
 	.fix-header {
 		position: fixed;
 		bottom: 0;
 	    width: 100%;
 	    height: 50px;
-	    z-index: 999;
+	    z-index: 99;
 	    top: 0;
 	    left: 0;
 	    border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -17,6 +17,9 @@
 	    justify-content: space-between;
 	    padding: 0px 15px 5px 15px;
 	    background-color: rgba(255, 255, 255, 0.5);
+	}
+	.diy-height {
+		padding-top: 10px;
 	}
 	.el-menu--horizontal.el-menu-demo {
 		background-color: transparent;
@@ -46,6 +49,24 @@
 		}
 		.hearder-right {
 			margin-right: 14px;
+			padding-top: 5px;
+		}
+		.fix-header {
+			height: 40px;
+		}
+		.diy-height {
+			padding-top: 4px;
+		}
+		.weui-cells__title {
+		    line-height: 35px;
+    		padding-top: 7px;
+		    text-align: center;
+		    font-weight: 700;
+		    color: #fff !important;
+		    margin-top: 0 !important;
+		}
+		.weui-cell {
+			line-height: 15px !important;
 		}
 	}
 	@media only screen and (min-width:960px) {
@@ -58,7 +79,7 @@
 <template>
 	<header class="header">
 		<div class="fix-header">
-			<div style="padding-top: 10px;">
+			<div class="diy-height">
 				<router-link to="/index"><img :src="imgUrl"></router-link>
 			</div>
 			<div style="margin-left: -100px;" class="hearder-center">
@@ -69,36 +90,56 @@
 				</el-menu>
 			</div>
 			<div>
-				<div  class="hearder-right">
-<!-- 				    <el-menu default-active="1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" background-color="#ffffff73" text-color="#fff" active-text-color="#ffd04b">
-				      <el-menu-item index="1">
-				        <i class="el-icon-menu"></i>
-				        <span slot="title">导航二</span>
-				      </el-menu-item>
-				      <el-menu-item index="2" disabled>
-				        <i class="el-icon-document"></i>
-				        <span slot="title">导航三</span>
-				      </el-menu-item>
-				      <el-menu-item index="3">
-				        <i class="el-icon-setting"></i>
-				        <span slot="title">导航四</span>
-				      </el-menu-item>
-				    </el-menu> -->
+				<div class="hearder-right">
+					<span v-show="!drawerVisibility" @click="drawerVisibility = !drawerVisibility">
+            			<x-icon type="navicon" size="35" style="fill:#000;position:relative;left:-3px;"></x-icon>
+         			</span>
 				</div>
 			</div>
 		</div>
+	    <drawer width="150px;" :style="{ zIndex: displayIndex, position: 'fixed', left: displayLeft}" :show.sync="drawerVisibility" show-mode="push" placement="right" :drawer-style="{'background-color':'#35495e', width: '150px', 'text-align': 'center'}">
+	      <div slot="drawer">
+	        <group title="目录导航">
+	          <cell v-for="item in menuList" :title="item.title"  @click.native="goRouter(item.name)">
+	          		<span slot="icon" v-if="item.index == 0">
+            			<x-icon type="home"></x-icon>
+         			</span>
+         			<span slot="icon" v-if="item.index == 1">
+            			<x-icon type="social-html5"></x-icon>
+         			</span>
+         			<span slot="icon" v-if="item.index == 2">
+            			<x-icon type="beer"></x-icon>
+         			</span>
+         			<span slot="icon" v-if="item.index == 3">
+            			<x-icon type="ios-list-outline"></x-icon>
+         			</span>
+         			<span slot="icon" v-if="item.index == 4">
+            			<x-icon type="android-mail"></x-icon>
+         			</span>
+	          </cell>
+	        </group>
+	      </div>
+	    </drawer>
 	</header>
 </template>
 
 <script>
+	import { Group, Cell, Drawer } from 'vux';
 	export default {
 		data () {
 			return {
-				imgUrl: require('../../img/steven.png')
+				imgUrl: require('../../img/steven.png'),
+				drawerVisibility: false,
 			}
 		},
+    	components: {
+    		Group,
+    		Cell,
+    		Drawer
+    	},
 		methods: {
 			goRouter (path) {
+				this.drawerVisibility = false;
 				this.$router.push({name: path});
 			}
 		},
@@ -108,6 +149,12 @@
 			},
 			menuList () {
 				return this.$store.state.menuList;
+			},
+			displayIndex () {
+				return this.drawerVisibility ? 100 : 98;
+			},
+			displayLeft () {
+				return this.drawerVisibility ? 0 : '100%';
 			}
 		},
 		created () {
