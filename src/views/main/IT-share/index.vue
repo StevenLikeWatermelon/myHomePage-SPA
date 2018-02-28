@@ -13,9 +13,16 @@
 	    box-shadow: #075498 0px 1px 10px;
 	   	cursor: pointer;
     }
-    .blog {
+    .blog, .blog-pagination{
     	margin: 25px 20px;
     	overflow: hidden;
+    }
+    .blog-pagination-div {
+	    text-align: center;
+	    background-color: #fff;
+	    width: 550px; 
+	    margin: 0 auto;
+    	border-radius: 5px;  	
     }
     .blog figure {
 	    background: #ececec;
@@ -71,6 +78,11 @@
 						</figcaption>
 					</figure>
 				</div>
+				<div class="blog-pagination" v-if="this.totalNum > 6">
+					<div class="blog-pagination-div">
+						<el-pagination @size-change="handleSizeChange" :current-page="currentPage" @current-change="handleCurrentChange"  :page-sizes="[6, 9, 18, 36]" :page-size="limit" layout="total, prev, pager, next, sizes" :total="totalNum"></el-pagination>
+					</div>
+				</div>
 			</div>
 		</article>
 	</section>
@@ -82,7 +94,11 @@
     	data () {
     		return {
     			loading: false,
-    			articleList: []
+    			articleList: [],
+    			totalNum: 0,
+    			limit: 6,
+    			currentPage: 1,
+    			originData: []
     		}
     	},
     	methods: {
@@ -91,7 +107,9 @@
 	    		// 获取文章列表
 	    		this.$http.get('src/phpCtrl/articleList.php').then(res => {
 	    			if (res && res.data && res.data.length) {
-	    				this.articleList = res.data;
+	    				this.totalNum = res.data.length;
+	    				this.originData = res.data;
+	    				this.articleList = res.data.slice(0, this.limit);
 	    			} else {
 	    				this.$message.error('获取文章列表为空!');
 	    			}
@@ -106,6 +124,17 @@
 					name: 'IT_share_detail',
 					query: {id: id}
 				});
+			},
+			handleSizeChange (limit) {
+				this.limit = limit;
+				this.currentPage = 1;
+				this.articleList = this.originData.slice(0, this.limit);
+			},
+			handleCurrentChange (page) {
+                this.currentPage = page;
+                let _start = (page - 1) * this.limit;
+                let _end = page * this.limit;
+                this.articleList = this.originData.slice(_start, _end);
 			}
     	},
     	created () {

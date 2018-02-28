@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import {Row, Col, Menu, MenuItem, Button, Loading, Input, Message} from 'element-ui'
+import {Row, Col, Menu, MenuItem, Button, Loading, Input, Message, Pagination} from 'element-ui'
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import {routersArr} from './router';
@@ -14,6 +14,7 @@ Vue.use(Button);
 Vue.use(Loading);
 Vue.use(MenuItem);
 Vue.use(Input);
+Vue.use(Pagination);
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
