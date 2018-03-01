@@ -1,6 +1,6 @@
 <style scoped>
 	.classBanner {
-		background: url('../../../src/img/indexBanner.png') 0 -100px no-repeat;
+		background: url('../../../src/img/indexBanner.jpg') 0 -100px no-repeat;
 		max-width: 1920px;
 		width: 100%;
 		height: 520px;

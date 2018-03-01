@@ -1,6 +1,6 @@
 <style>
 	.classBanner {
-		background: url('../../../src/img/indexBanner.png');
+		background: url('../../../src/img/indexBanner.jpg');
 		max-width: 1920px;
 		width: 100%;
 		height: 800px;
