@@ -40,12 +40,14 @@ const router = new VueRouter(routerConfig);
 router.beforeEach((to, from, next) => {
 	let notFound = true;
 	let cuurentName = '';
+	let cuurentQuery;
 	routersArr.forEach(item => {
 		let routerInfo = item.children;
 		routerInfo.forEach(item => {
 			if (to.name == item.name) {
 				notFound = false;
 				cuurentName = to.name;
+				cuurentQuery = to.query;
 			}
 		});
 	});
@@ -60,11 +62,13 @@ router.beforeEach((to, from, next) => {
 		let isMRouter = cuurentName.slice(-2) === '_m' ? true : false;
 		if (width <= 960 && !isMRouter) {
 			next({
-	            name: cuurentName + '_m'
+	            name: cuurentName + '_m',
+	            query: cuurentQuery
 	        });
 		} else if (width > 960 && isMRouter) {
 			next({
-	            name: cuurentName.slice(0, -2)
+	            name: cuurentName.slice(0, -2),
+	            query: cuurentQuery
 	        });
 		} else {
 			next();
