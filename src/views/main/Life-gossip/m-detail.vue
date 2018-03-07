@@ -12,7 +12,7 @@
 						<p>
 						    (本文由前端工程师steven沈文杰原创，转载请放原文链接，谢谢！)
 						</p>
-						<div style="text-align: center;">
+						<div style="text-align: center;margin-bottom: 12px;">
 							<el-button type="success" @click="goBack()" round>返回</el-button>
 						</div>
 					</ul>
