@@ -1,5 +1,8 @@
 import Main from './views/main.vue';
 
+// display字段为是否需要展示位菜单导航： 1是，0否
+// index为显示的菜单顺序
+// m站不需要加index和display,但是需要在pc路由、name后面加 '_m'
 const allRouters = {
 	path: '/',
 	name: 'root-path',
@@ -16,6 +19,7 @@ const allRouters = {
 		{path: 'Life-gossip-detail', name: 'Life-gossip-detail', title: "生活杂谈详情", display: 0, index: 2, component:  resolve => require(['./views/main/Life-gossip/detail.vue'], resolve)},
 		{path: 'Life-gossip-detail_m', name: 'Life-gossip-detail_m', title: "生活杂谈详情", component:  resolve => require(['./views/main/Life-gossip/m-detail.vue'], resolve)},
 		{path: 'work-experience', name: 'work-experience', title: "我的简历", display: 1, index: 3, component:  resolve => require(['./views/main/work-exprience/index.vue'], resolve)},
+		{path: 'work-experience_m', name: 'work-experience_m', title: "我的简历", component:  resolve => require(['./views/main/work-exprience/m-index.vue'], resolve)},
 		{path: 'contact-me', name: 'contact-me', title: "给我留言", display: 1, index: 4, component:  resolve => require(['./views/main/contact-me/index.vue'], resolve)},
 		{path: 'contact-me_m', name: 'contact-me_m', title: "给我留言", component:  resolve => require(['./views/main/contact-me/m-index.vue'], resolve)},
 	]
