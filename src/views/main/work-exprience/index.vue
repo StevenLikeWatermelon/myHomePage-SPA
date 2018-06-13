@@ -144,7 +144,7 @@
 		<div v-show="disMask">
 			<div class="ivu-modal-mask"></div>
 			<div class="ivu-modal-wrap">
-				<div class="ivu-modal" style="width: 360px;">
+				<div class="ivu-modal" style="width: 360px;max-width: 100%;">
 					<div class="ivu-modal-content">
 						<a class="ivu-modal-close" @click="closeAndGo()"><i class="ivu-icon ivu-icon-ios-close-empty"></i></a>
 						<div class="ivu-modal-header">

@@ -139,6 +139,9 @@
 	.ivu-icon-ios-close-empty:before {
 	    content: "×";
 	}
+	.ivu-modal-close .ivu-icon-ios-close-empty {
+		left: 0;
+	}
 </style>
 
 <template>
