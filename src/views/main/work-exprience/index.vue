@@ -50,7 +50,8 @@
 	}
 	.container .work-exprience-detail ul > li .cbp_tmtime span:last-child {
 	    font-size: 22px;
-	    color: #3594cb;
+	    /*color: #3594cb;*/
+	    color: #6cbfee;
 	}
 	.container .work-exprience-detail ul > li .cbp_tmicon {
 		width: 10px;
@@ -97,6 +98,10 @@
 	    -webkit-margin-end: 0px;
 	    font-weight: bold;
 	    display: block;
+	}
+	.container .work-exprience-detail ul > li p {
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.blogpic {
 	    width: 200px;
