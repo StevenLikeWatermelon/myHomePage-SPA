@@ -5,6 +5,7 @@
 	    width: 1000px;
 	    margin: 50px auto;
 	    overflow: hidden;
+	    max-width: 100%;
     }
     .container {
     	background: url('../../../img/articlebg.png') repeat;
