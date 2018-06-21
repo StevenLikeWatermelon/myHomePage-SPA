@@ -205,6 +205,7 @@
 	    				setTimeout(()=> {
 	    					window.startScroll = new scrollReveal({reset: true});
 	    				}, 100);
+	    				window.scrollTo(0, 0);
 	    				this.disMask = false;
 	    			} else {
 	    				this.$message.error('密码错误!');
