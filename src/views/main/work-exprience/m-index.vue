@@ -1,7 +1,85 @@
+<style>
+	.m-container.container .about .title-h2 {
+		font-size: 15px;
+		padding: 5px 0;
+		margin-top: 20px;
+		max-width: 150px;
+		width: 25%
+	}
+	.container.m-container .blog-detail {
+		margin: 20px auto;
+		line-height: 15px;
+	}
+	.m-container.container .blog-detail ul p {
+		text-indent: -27px;
+    	margin-left: 27px;
+    	font-size: 12px;
+	}
+	.container.m-container .work-exprience-detail ul {
+		margin: 22px 0 0;
+	}
+	.container.m-container .work-exprience-detail ul>li .cbp_tmtime {
+		width: 15%;
+		max-width: 100px;
+		padding-right: 15px;
+	}
+	.m-container.container .cbp_tmtimeline .cbp_tmtime span:first-child {
+		font-size: 12px;
+	}
+	.container.m-container .work-exprience-detail ul > li .cbp_tmtime span:last-child {
+		font-size: 14px;
+	}
+	.container.m-container .work-exprience-detail ul::before {
+		width: 3px;
+		left: 101px;
+	}
+	.container.m-container .work-exprience-detail ul > li .cbp_tmicon {
+		width: 8px;
+    	height: 8px;
+    	left: 113px;
+	}
+	.container.m-container .work-exprience-detail ul > li .cbp_tmlabel {
+		margin: 0 5px 15px 101px;
+		height: auto;
+		padding: 8px;
+	}
+	.container.m-container .work-exprience-detail ul > li h2 {
+		font-size: 14px;
+		height: 42px;
+		padding: 0;
+	}
+	.container.m-container .work-exprience-detail ul > li h2 span{
+		float: left;
+	}
+	.container.m-container .work-exprience-detail ul > li h2 .special-span {
+		clear: both;
+		font-size: 12px;
+		padding-top: 5px;
+	}
+	.container.m-container .blogpic {
+		width: 100px;
+		display: none;
+		height: 90px;
+	}
+	.container.m-container .blogpic img {
+		display: block;
+		width: 100%;
+		height: 50%;
+		margin-top: 22.5px;
+	}
+	.container.m-container .work-exprience-detail ul > li p {
+		white-space: pre-wrap;
+		font-size: 12px;
+		text-indent: -20px;
+		margin-left: 20px;
+		line-height: 20px;
+		display: block;
+	}
+</style>
 <template>
 	<section>
 		<article>
-			<div class="container">
+			<div class="container m-container">
 				<div v-html="Nowcontent"></div>
 			</div>
 		</article>
@@ -64,6 +142,7 @@
 	    				setTimeout(()=> {
 	    					window.startScroll = new scrollReveal({reset: true});
 	    				}, 100);
+	    				window.scrollTo(0, 0);
 	    				this.disMask = false;
 	    			} else {
 	    				this.$message.error('密码错误!');

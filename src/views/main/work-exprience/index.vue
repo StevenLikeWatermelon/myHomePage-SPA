@@ -18,14 +18,14 @@
 	.container .work-exprience-detail ul > li {
 		position: relative;
 	}
-
+	
 	.container .work-exprience-detail ul > li .cbp_tmtime {
 		display: block;
 	    width: 100px;
 	    padding-right: 30px;
 	    position: absolute;
 	    margin-left: 20px;
-	    background: #afdcf82b; 
+	    background-color: rgba(175,220,248, 0.2); 
 	    border-radius: 20px 0 0 20px; 
 	    -webkit-transition: all 1s;
 	    -moz-transition: all 1s;
@@ -81,10 +81,10 @@
 	    margin: 0 30px 15px 180px;
 	    background: #3594cb;
 	    color: #fff;
-	    padding: 2em;
+	    padding: 20px;
 	    position: relative;
 	    border-radius: 5px;
-	    height: 150px;
+	    height: 135px;
 	}
 	.container .about .title-h2 {font-size: 22px;margin-bottom: 20px;background: #2a7497;padding: 10px 0;width: 200px;text-align: center;border-radius: 0 30px 30px 0;box-shadow: #21566f 1px 1px 1px;border-left: #dae1e4 6px solid;margin-left: 20px;color: #fff;margin-top: 40px;}
 	.container .work-exprience-detail ul > li h2{
@@ -92,16 +92,16 @@
 	    padding: 0 0 10px 0;
 	    font-size: 16px;
 	    text-shadow: rgba(7, 84, 152, 0.71) 1px 1px 1px;
-	    -webkit-margin-before: 0.83em;
-	    -webkit-margin-after: 0.83em;
-	    -webkit-margin-start: 0px;
-	    -webkit-margin-end: 0px;
 	    font-weight: bold;
 	    display: block;
+	}
+	.container .work-exprience-detail ul > li h2 .special-span {
+		float: right;
 	}
 	.container .work-exprience-detail ul > li p {
 		text-overflow: ellipsis;
 		white-space: nowrap;
+		line-height: 25px;
 	}
 	.blogpic {
 	    width: 200px;
