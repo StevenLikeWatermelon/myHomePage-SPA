@@ -29,13 +29,8 @@ $ npm run dev //启动本地服务
 
 ## Preview in Mobile
 
-![首页](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven9.png)
-
-![前端博客](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven5.png)
-
-![前端博客](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven6.png)
-
-![关于博主](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven7.png)
-
-![给我留言](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven8.png)
-
+<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven9.png" style="width: 50%" alt="首页">
+<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven5.png" style="width: 50%" alt="前端博客">
+<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven6.png" style="width: 50%" alt="前端博客">
+<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven7.png" style="width: 50%" alt="关于博主">
+<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven8.png" style="width: 50%" alt="给我留言">
