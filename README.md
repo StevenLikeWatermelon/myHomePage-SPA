@@ -29,10 +29,6 @@ $ npm run dev //启动本地服务
 
 ## Preview in Mobile
 
-<div style="width: 100%;display: flex;justify-content: space-between;align-items: flex-start;flex-wrap: wrap;">
-	<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven9.png" style="width: 44%;display: block;" alt="首页">
-	<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven5.png" style="width: 44%;display: block;" alt="前端博客">
-	<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven6.png" style="width: 44%;display: block;" alt="前端博客">
-	<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven7.png" style="width: 44%;display: block;" alt="关于博主">
-	<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven8.png" style="width: 44%;display: block;" alt="给我留言">
-</div>
+<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven9.png" width="40%"  hspace="60" alt="首页"><img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven5.png" width="40%"  hspace="60" alt="前端博客">
+<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven6.png" width="40%"  hspace="60" alt="前端博客"><img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven7.png" width="40%"  hspace="60" alt="关于博主">
+<img src="https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven8.png" width="40%"  hspace="60" alt="给我留言">
