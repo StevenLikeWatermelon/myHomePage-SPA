@@ -120,8 +120,8 @@
     	name: 'work-experience',
     	data () {
     		return {
-    			disMask: true,
-    			viewPage: '',
+    			disMask: false,
+    			viewPage: 'welcomeToView',
     			Nowcontent: ''
     		}
     	},
@@ -151,6 +151,9 @@
     		},
     		activated() {
     			window.startScroll = new scrollReveal({reset: true});
+    		},
+    		created() {
+    			this.checkPasswords();
     		}
     	}
     };
