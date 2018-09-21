@@ -14,3 +14,7 @@ $ npm run dev //启动本地服务
 ``
 注:本地服务仅能看部分前端页面，php源码不开放
 ``
+
+## Preview in PC
+
+![首页](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven1.jpg)
