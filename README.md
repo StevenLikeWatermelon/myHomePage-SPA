@@ -18,3 +18,9 @@ $ npm run dev //启动本地服务
 ## Preview in PC
 
 ![首页](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven1.jpg)
+
+![前端博客](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven2.jpg)
+
+![关于博主](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven3.jpg)
+
+![给我留言](https://tiansuiziswjimg.oss-cn-beijing.aliyuncs.com/steven4.jpg)
