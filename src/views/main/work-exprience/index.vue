@@ -212,12 +212,12 @@
 	    			}
 	    		})
     		},
-    		activated() {
-    			window.startScroll = new scrollReveal({reset: true});
-    		},
-    		created() {
-    			this.checkPasswords();
-    		}
-    	}
+    	},
+    	activated() {
+			window.startScroll = new scrollReveal({reset: true});
+		},
+    	created() {
+			this.checkPasswords();
+		}
     };
 </script>
